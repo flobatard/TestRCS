@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.flake8-bugbear]
+# Depends(...) as a default is the standard FastAPI dependency-injection idiom
+extend-immutable-calls = ["fastapi.Depends", "fastapi.security.HTTPBearer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

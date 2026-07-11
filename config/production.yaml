@@ -1,0 +1,19 @@
+# Config publique de production (versionnée dans le repo).
+# Les secrets (POSTGRES_PASSWORD, ...) vont dans le .env du serveur, jamais ici.
+
+DEBUG: false
+
+# Si le front et l'API partagent la même origine (derrière un reverse proxy),
+# laisser vide (middleware CORS désactivé). Ajouter l'origine du front sinon.
+CORS_ORIGINS: []
+
+# Postgres du docker-compose (l'hôte est le service `db` ; docker-compose.yml
+# force de toute façon POSTGRES_HOST=db dans le conteneur api)
+POSTGRES_USER: app
+POSTGRES_HOST: db
+POSTGRES_PORT: 5432
+POSTGRES_DB: app
+
+# Fournisseur OIDC de prod — remplacer par votre instance
+OIDC_ISSUER: https://votre-fournisseur-oidc.example.com
+OIDC_AUDIENCE: mon-api

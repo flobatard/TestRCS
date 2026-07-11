@@ -1,0 +1,19 @@
+# Config publique de développement (versionnée dans le repo).
+# Les secrets (POSTGRES_PASSWORD, ...) et les overrides locaux vont dans .env.
+# NB : le service db de docker-compose lit POSTGRES_* depuis .env (interpolation
+# compose), pas depuis ce fichier — garder les valeurs cohérentes.
+
+DEBUG: true
+
+CORS_ORIGINS:
+  - http://localhost:4200
+
+# Postgres local
+POSTGRES_USER: app
+POSTGRES_HOST: localhost
+POSTGRES_PORT: 5432
+POSTGRES_DB: app
+
+# Fournisseur OIDC de dev — remplacer par votre instance
+OIDC_ISSUER: https://votre-fournisseur-oidc-dev.example.com
+OIDC_AUDIENCE: mon-api-dev
