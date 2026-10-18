@@ -1,9 +1,9 @@
-# FastAPI + Alembic Template
+# TestRCS
 
-Template de backend pour démarrer un projet **API REST**. Il fournit un socle
-prêt à l'emploi : app factory, configuration multi-environnements, base de
-données async et validation de tokens OIDC — sans aucune logique métier. À
-cloner puis à adapter (renommer `PROJECT_NAME`, ajouter vos domaines).
+Petit projet pour explorer les possibilités du **RCS** (Rich Communication
+Services). Le backend est une **API REST** construite sur un socle prêt à
+l'emploi : app factory, configuration multi-environnements, base de données
+async et validation de tokens OIDC.
 
 Stack : **FastAPI** + **SQLAlchemy 2.0 (async)** + **Alembic** + **PostgreSQL
 (asyncpg)** + **OIDC** (validation JWT côté resource-server).

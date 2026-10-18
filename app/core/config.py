@@ -93,7 +93,7 @@ class Settings(BaseSettings):
 
     # Application
     APP_ENV: str = "development"
-    PROJECT_NAME: str = "FastAPI Template"
+    PROJECT_NAME: str = "TestRCS"
     API_V1_PREFIX: str = "/api/v1"
     DEBUG: bool = False
 
